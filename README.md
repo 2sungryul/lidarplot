@@ -1,6 +1,6 @@
 # lidarplot
 
-ros2 test package for RPLIDAR C1 on Jetson nano
+ros2 test package for RPLIDAR C1 on Jetson nano and WSL2
 
 dependency : ros2 foxy, opencv 4.8, cmake 3.16
 
