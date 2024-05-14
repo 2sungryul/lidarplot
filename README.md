@@ -6,7 +6,8 @@ dependency : ros2 foxy, opencv 4.8, cmake 3.16
 
 RPLIDAR C1 ROS2 package : https://github.com/Slamtec/sllidar_ros2
 
-sllidar_node of sllidar_ros2 package publishes /scan topic. Subscriber node lidarplot subscribes /scan topic and plot an image of scan view using opencv.
+sllidar_node of sllidar_ros2 package publishes /scan topic.
+Subscriber node lidarplot subscribes /scan topic and plot an image of scan view using opencv.
 
 Open linux terminal on Jetson nano
 
