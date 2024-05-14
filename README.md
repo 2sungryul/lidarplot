@@ -42,5 +42,6 @@ $ ros2 run rviz2 rviz2 sllidar_ros2.rviz
 
 $ ros2 run lidarplot lidarplot
 
-![image](https://github.com/2sungryul/lidarplot/assets/67367753/740102ce-cfa2-44af-80e8-335bf9e05711)
+![image](https://github.com/2sungryul/lidarplot/assets/67367753/7bbd37e9-748b-40a3-927e-3a9ea9ddf54f)
+
 
