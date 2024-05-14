@@ -28,7 +28,7 @@ $ sudo chmod a+rw /dev/ttyUSB0
 $ ros2 run sllidar_ros2 sllidar_node
 
 
-Open new linux terminal on WSL2
+Open linux terminal on WSL2
 
 $ export LIBGL_ALWAYS_INDIRECT=0
 
