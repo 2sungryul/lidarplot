@@ -36,7 +36,7 @@ $ export LIBGL_ALWAYS_INDIRECT=0
 
 $ export LIBGL_ALWAYS_SOFTWARE=1
 
-$ wget [https://github.com/Slamtec/sllidar_ros2/blob/main/rviz/sllidar_ros2.rviz](https://raw.githubusercontent.com/Slamtec/sllidar_ros2/main/rviz/sllidar_ros2.rviz)
+$ wget https://raw.githubusercontent.com/Slamtec/sllidar_ros2/main/rviz/sllidar_ros2.rviz
 
 $ ros2 run rviz2 rviz2 sllidar_ros2.rviz
 
