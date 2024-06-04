@@ -11,7 +11,7 @@ Subscriber node lidarplot subscribes /scan topic and plot an image of scan view 
 
 # Open linux terminal on Jetson nano
 
-$ cd ~/ros2_ws/src
+`$ cd ~/ros2_ws/src`
 
 $ git clone https://github.com/Slamtec/sllidar_ros2.git
 
