@@ -32,9 +32,11 @@ $ ros2 run sllidar_ros2 sllidar_node
 
 # Open linux terminal on WSL2
 
-$ export LIBGL_ALWAYS_INDIRECT=0
+$ echo 'export LIBGL_ALWAYS_INDIRECT=0' >> ~/.bashrc 
 
-$ export LIBGL_ALWAYS_SOFTWARE=1
+$ echo 'export LIBGL_ALWAYS_SOFTWARE=1' >> ~/.bashrc
+
+$ source ~/.bashrc
 
 $ wget https://raw.githubusercontent.com/Slamtec/sllidar_ros2/main/rviz/sllidar_ros2.rviz
 
