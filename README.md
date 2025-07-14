@@ -9,7 +9,7 @@ RPLIDAR C1 ROS2 package : https://github.com/Slamtec/sllidar_ros2
 sllidar_node of sllidar_ros2 package publishes /scan topic.
 Subscriber node lidarplot subscribes /scan topic and plot an image of scan view using opencv.
 
-# Open linux terminal on Jetson nano
+# Run lidar publisher on Jetson nano
 
 $ cd ~/ros2_ws/src
 
@@ -30,7 +30,7 @@ $ ros2 run sllidar_ros2 sllidar_node
 ![image](https://github.com/2sungryul/lidarplot/assets/67367753/2a9864a8-5207-4bcd-964e-665dba9504ca)
 
 
-# Open linux terminal on WSL2
+# Run lidar subscriber on WSL2
 
 $ echo 'export LIBGL_ALWAYS_INDIRECT=0' >> ~/.bashrc 
 
