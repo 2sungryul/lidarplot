@@ -28,31 +28,22 @@ $ ros2 run sllidar_ros2 sllidar_node
 
 
 # Run lidar subscriber on WSL2
-
+```bash
 $ echo 'export LIBGL_ALWAYS_INDIRECT=0' >> ~/.bashrc 
-
 $ echo 'export LIBGL_ALWAYS_SOFTWARE=1' >> ~/.bashrc
-
 $ source ~/.bashrc
-
 $ wget https://raw.githubusercontent.com/Slamtec/sllidar_ros2/main/rviz/sllidar_ros2.rviz
-
 $ ros2 run rviz2 rviz2 sllidar_ros2.rviz
-
+```
 ![image](https://github.com/2sungryul/lidarplot/assets/67367753/7bfa9fd8-9b67-480d-b5c6-db0c306ac32f)
-
+```bash
 $ cd ~/ros2_ws/src
-
 $ git clone https://github.com/2sungryul/lidarplot.git
-
 $ cd ~/ros2_ws
-
 $ colcon build --symlink-install --packages-select lidarplot
-
 $ source install/local_setup.bash
-
 $ ros2 run lidarplot lidarplot
-
+```
 ![image](https://github.com/2sungryul/lidarplot/assets/67367753/7bbd37e9-748b-40a3-927e-3a9ea9ddf54f)
 
 
