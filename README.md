@@ -10,22 +10,19 @@ sllidar_node of sllidar_ros2 package publishes /scan topic.
 Subscriber node lidarplot subscribes /scan topic and plot an image of scan view using opencv.
 
 # Run lidar publisher on Jetson nano
-
+```bash
 $ cd ~/ros2_ws/src
-
 $ git clone https://github.com/Slamtec/sllidar_ros2.git
-
 $ cd ~/ros2_ws
-
 $ colcon build --symlink-install --packages-select sllidar_ros2
-
 $ source install/local_setup.bash
-
+```
 Make sure your lidar sensor is connected to /dev/ttyUSB0.
 
+```bash
 $ sudo chmod a+rw /dev/ttyUSB0
-
 $ ros2 run sllidar_ros2 sllidar_node
+```
 
 ![image](https://github.com/2sungryul/lidarplot/assets/67367753/2a9864a8-5207-4bcd-964e-665dba9504ca)
 
