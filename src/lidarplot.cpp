@@ -25,6 +25,29 @@ void plotLidar(double dist, double angle)
 	cv::circle(img, cv::Point2f(rotpt.at<double>(0, 0), rotpt.at<double>(1, 0)), 1, cv::Scalar(0, 0, 255), -1);
 }
 
+void plotLidar2(double dist, double radian)
+{
+	cv::Point2f cp(WIDTH / 2.0, HEIGHT / 2.0);
+	cv::Point2f pt(WIDTH / 2.0, HEIGHT / 2.0 + dist * RATIO);
+	cv::drawMarker(img, cp, cv::Scalar(255, 0, 0), cv::MARKER_CROSS, 10);
+	
+  double x,y;
+  x = 250 + dist*RATIO*sin(3.14159 - radian);
+  y = 250 - dist*RATIO*cos(3.14159 - radian);
+
+  /*if(radian >= 0)
+  { 
+    x = 250 + dist*RATIO*sin(3.14159 - radian);
+    y = 250 - dist*RATIO*cos(3.14159 - radian);
+  } 
+  else{
+    x = 250 - dist*RATIO*sin(3.14159 - abs(radian));
+    y = 250 - dist*RATIO*cos(3.14159 - abs(radian));
+  }*/ 
+
+	cv::circle(img, cv::Point2f(x, y), 1, cv::Scalar(0, 0, 255), -1);
+}
+
 static void scanCb(sensor_msgs::msg::LaserScan::SharedPtr scan) {
   int count = scan->scan_time / scan->time_increment;
   printf("[SLLIDAR INFO]: I heard a laser scan %s[%d]:\n", scan->header.frame_id.c_str(), count);
@@ -33,9 +56,11 @@ static void scanCb(sensor_msgs::msg::LaserScan::SharedPtr scan) {
   img = cv::Scalar(255, 255, 255);
   for (int i = 0; i < count; i++) {
     float degree = RAD2DEG(scan->angle_min + scan->angle_increment * i);
-    printf("[SLLIDAR INFO]: angle-distance : [%f, %f]\n", degree, scan->ranges[i]);
+    float radian = scan->angle_min + scan->angle_increment * i;
+    printf("[SLLIDAR INFO]: angle-distance : [%f,%f,%f]\n", degree, radian, scan->ranges[i]);
     //plotLidar(img, scan->ranges[i], degree);
-    plotLidar(scan->ranges[i]*1000, degree);
+    //plotLidar(scan->ranges[i]*1000, degree);
+    plotLidar2(scan->ranges[i]*1000, radian);
     
   }
   cv::imshow("lidar",img);
